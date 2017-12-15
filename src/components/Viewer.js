@@ -1,5 +1,6 @@
 // COMP 37E-1
 import React, { Component } from 'react';
+import Video from './Video';
 
 import { connect } from 'react-redux';
 import { getVideos } from '../ducks/reducer';
@@ -25,6 +26,10 @@ class Viewer extends Component {
   render() {
     console.log('VIEWER STATE', this.state);
     console.log('VIEWER PROPS', this.props);
+    // COMPS 36E, 36H
+    const videos = this.props.videos.map(video => {
+      return <Video video={ video }/>
+    })
     return(
       <div className='viewer-wrapper'>
       I'm the viewer
