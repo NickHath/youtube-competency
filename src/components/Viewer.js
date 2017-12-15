@@ -13,7 +13,7 @@ class Viewer extends Component {
     super();
     this.state = { term: '' }
     // COMP 37C
-    this.retrieveVideos = this.retrieveVideos.bind(this);
+    // this.retrieveVideos = this.retrieveVideos.bind(this);
   }
 
   handleInput(input) {
@@ -36,7 +36,7 @@ class Viewer extends Component {
       <div className='viewer-wrapper'>
       I'm the viewer
       {/* COMP 36J */}
-      <button onClick={ this.retrieveVideos(this.state.term) }>GET VIDEOS</button>
+      <button onClick={ () => this.retrieveVideos(this.state.term) }>GET VIDEOS</button>
       {/* COMP 42E */}
       <Link to={ `/all/${this.state.term}` }><button>See previously searched videos using this term</button></Link>
       {/* COMP 37D */}
