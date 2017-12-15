@@ -1,5 +1,6 @@
 import React from 'react';
 
+// COMPS 38C, 38D
 export default function Video(props) {
   console.log('VIDEO PROPS', props);
   return (
