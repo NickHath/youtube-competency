@@ -18,8 +18,8 @@ class Viewer extends Component {
     this.setState({ term: input });
   }
 
-  retrieveVideos() {
-    let results = this.props.getVideos();
+  retrieveVideos(term) {
+    this.props.getVideos(term);
   }
 
   // COMP 36G
@@ -34,10 +34,11 @@ class Viewer extends Component {
       <div className='viewer-wrapper'>
       I'm the viewer
       {/* COMP 37D, 36J */}
-      <button onClick={ () => this.retrieveVideos() }>GET VIDEOS</button>
+      <button onClick={ () => this.retrieveVideos(this.state.term) }>GET VIDEOS</button>
       {/* COMP 42E */}
       <Link to={ `/all/${this.state.term}` }><button>See previously searched videos using this term</button></Link>
       <input onChange={ e => this.handleInput(e.target.value) }/>
+      { videos }
       </div>
     )
   }
