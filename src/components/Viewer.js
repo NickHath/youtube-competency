@@ -47,10 +47,15 @@ class Viewer extends Component {
   }
 }
 
-// COMP 43H
+// COMP 43H, 43G
 function mapStateToProps(state) {
   return state;
 }
 
+// COMP 43J
+function mapDispatchToProps() {
+  return { getVideos };
+}
+
 // COMPS 37E-2, 43C 
-export default connect(mapStateToProps, { getVideos })(Viewer);
+export default connect(mapStateToProps, mapDispatchToProps)(Viewer);
