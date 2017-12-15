@@ -9,6 +9,7 @@ module.exports = {
     })
   },
 
+  // COMP 70K - QUERY FUNCTIONS FROM MASSIVE
   addVideo: (req, res) => {
     const db = req.app.get('db');
     const { search_term, youtube_id, video_title, descr, img, channel_title, channel_id, publish_time } = req.body;
