@@ -17,7 +17,7 @@ massive(process.env.CONNECTION_STRING).then(db => app.set('db', db))
                                       .catch(err => console.log(err));
 
 // COMPS 74D-1, 74D-2, 74D-3, 74D-4, 76C
-app.get('/api/youtube/:term', youtubeController.getVideos);
+app.get('/api/youtube', youtubeController.getVideos);
 
 app.post('/api/videos', youtubeController.addVideo);
 app.put('/api/update', youtubeController.updateVideo);

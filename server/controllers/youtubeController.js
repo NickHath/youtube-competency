@@ -3,8 +3,8 @@ youtubeSearch = require('youtube-api-search');
 
 module.exports = {
   getVideos: (req, res) => {
-    // WILL BE COMP 76E
-    youtubeSearch({ key: process.env.YOUTUBE_API_KEY, term: req.params.term }, videos => {
+    // COMP 76E
+    youtubeSearch({ key: process.env.YOUTUBE_API_KEY, term: req.query.term }, videos => {
       res.status(200).send(videos);
     })
   },

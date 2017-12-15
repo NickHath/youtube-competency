@@ -20,7 +20,7 @@ export default function reducer(state=initialState, action) {
 // COMP 43F
 export function getVideos(term) {
   // COMP 44C, 44D
-  const results = axios.get('http://localhost:4200/api/youtube/' + term)
+  const results = axios.get('http://localhost:4200/api/youtube?term=' + term)
                        .then(res => {
                           let results = res.data;
                           results.forEach(video => {
